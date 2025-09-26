@@ -16,15 +16,18 @@ public class ISCConverter {
         currencies.put("UAH", UAH);
         
         // Logic
-        System.out.println("Welcome to the currency converter!");
-        System.out.println("Everything is correct on 24.09.2025.\n");
+        System.out.print("Welcome to the currency converter!\n" +
+                         "Everything is up-to-date on 24.09.2025.\n\n" +
 
-        System.out.println("Please choose 2 currencies from the following list:\n");
-        System.out.println("1) RUB\n2) KZT\n3) BYN\n4) UAH\n");
+                         "Please choose 2 currencies from the following list:\n" +
+                         "1) RUB\n" + 
+                         "2) KZT\n" + 
+                         "3) BYN\n" + 
+                         "4) UAH\n" +
 
-        System.out.println("And write a special notation: amount CURRENCY1 -> CURRENCY2\n");
+                         "And write a special notation: amount CURRENCY1 -> CURRENCY2\n" +
 
-        System.out.println("\n> Your input: ");
+                         "\n> Your input: ");
 
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
