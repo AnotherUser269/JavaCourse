@@ -8,6 +8,7 @@ import java.io.IOException;
 public class HangMan {
     static final Path filePath = Path.of("src/resources/words.txt");
     static final Path stagesPath = Path.of("src/resources/stages.txt");
+    static final String allLetters = "qwertyuiopasdfghjklzxcvbnm";
 
     private static Map<Integer, String> stages = new HashMap<Integer, String>();
 
@@ -40,12 +41,12 @@ public class HangMan {
         while(!(userWord.equals(secretWord)) && fails != 6) {
             showStatistics(fails, bannedLetters, currentProgress);
 
-            System.out.println("Enter a letter: ");
+            System.out.print("Enter a letter: ");
             userLetter = scanner.nextLine().toLowerCase();
 
-            if(bannedLetters.indexOf(userLetter) == -1 && userLetter.length() == 1) {
-                if("qwertyuiopasdfghjklzxcvbnm".contains(userLetter)){
-                    if (makeGuess(userLetter, secretWord)) {
+            if(!(bannedLetters.contains(userLetter)) && userLetter.length() == 1) {
+                if(allLetters.contains(userLetter)){
+                    if (secretWord.contains(userLetter)) {
                         for(int i=0; i<secretWord.length(); i++) {
                             if (secretWord.charAt(i) == userLetter.charAt(0)) {
                                 currentProgress[i] = userLetter;
@@ -90,25 +91,16 @@ public class HangMan {
 
     static void showStatistics(int fails, ArrayList<String> bannedLetters, String[] currentWord) {
         // Prints current state of the game
+        int lives = 6 - fails;
 
         System.out.print("\033[H\033[2J");
         System.out.println(stages.get(fails));
 
-        int lives = 6 - fails;
+        System.out.println("\n<Statistics>\n\n" +
+                             "\n- Lives: " + lives +
+                             "\n- Banned letters: " + String.join("", bannedLetters) +
+                             "\n- Current progress: " + String.join("", currentWord) + "\n");
 
-        System.out.println("\n<Statistics>\n\n");
-        System.out.println("- Lives: " + lives);
-        System.out.println("- Banned letters: " + String.join("", bannedLetters));
-        System.out.println("- Current progress: " + String.join("", currentWord));
-        System.out.println("\n");
-    }
-
-    static boolean makeGuess(String letter, String secretWord) {
-        if (!(secretWord.contains(letter))){
-            return false;
-        }
-
-        return true;
     }
  
 }
