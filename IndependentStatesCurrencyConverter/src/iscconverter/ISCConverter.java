@@ -19,13 +19,14 @@ public class ISCConverter {
         System.out.print("Welcome to the currency converter!\n" +
                          "Everything is up-to-date on 24.09.2025.\n\n" +
 
-                         "Please choose 2 currencies from the following list:\n" +
+                         "Please choose 2 currencies from the following list:\n\n" +
+
                          "1) RUB\n" + 
                          "2) KZT\n" + 
                          "3) BYN\n" + 
                          "4) UAH\n" +
 
-                         "And write a special notation: amount CURRENCY1 -> CURRENCY2\n" +
+                         "\nAnd write a special notation: amount CURRENCY1 -> CURRENCY2\n" +
 
                          "\n> Your input: ");
 

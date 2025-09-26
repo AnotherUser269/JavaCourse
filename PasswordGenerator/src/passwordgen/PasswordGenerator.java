@@ -3,9 +3,9 @@ import java.util.*;
 
 public class PasswordGenerator {
     public static void main (String[] args) {
-        System.out.println("Welcome to the password generator.\n");
-        
-        System.out.println("Please, provide a length in 8-12 range: ");
+        System.out.print("Welcome to the password generator.\n" + 
+                         "\nPlease, provide a length in 8-12 range: ");
+                           
         Scanner scanner = new Scanner(System.in);
         
         try {
