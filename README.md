@@ -16,6 +16,8 @@ cd JavaCourse
 
 # Project 1 - HangMan:
 
+![Preview1](https://github.com/AnotherUser269/JavaCourse/blob/main/HangMan/src/Screenshot1.png?raw=true)
+
 The first project is an implementetion of the hangman game. Uses words of length >= 5 from the https://github.com/first20hours/google-10000-english/ repository. This small programm displays an ascii arts, representing the current game state. 
 
 
@@ -37,6 +39,8 @@ java -cp out hangman.HangMan
 
 # Project 2 - Independent States currency converter (ISCConverter):
 
+![Preview2](https://github.com/AnotherUser269/JavaCourse/blob/main/IndependentStatesCurrencyConverter/src/Screenshot1.png?raw=true)
+
 The second project implements a simple logic of converting currencies. It uses a simple notation, which provides a better user experience.
 
 **Build & run:**
@@ -53,6 +57,8 @@ java -cp out iscconverter.ISCConverter
 
 
 # Project 3 - Strong Password Generator:
+
+![Preview3](https://github.com/AnotherUser269/JavaCourse/blob/main/PasswordGenerator/src/Screenshot1.png?raw=true)
 
 Warning, it's a very bad practice, to use a pseudorandom numbers, while creating a security system, so this project is for educational purpouses only. The task was to create a password with 8 <= length <= 12, so there is almost nothing to improve.
 
